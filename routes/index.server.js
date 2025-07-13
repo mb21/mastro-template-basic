@@ -1,7 +1,5 @@
 import { Layout } from "../components/Layout.js";
-import { html } from "mastro/html.js";
-import { readDir, readTextFile } from "mastro/fs.js";
-import { htmlToResponse } from "mastro/routes.js";
+import { html, htmlToResponse, readDir, readTextFile } from "mastro";
 
 export const GET = () =>
   htmlToResponse(
@@ -9,7 +7,7 @@ export const GET = () =>
       title: "Hello world",
       children: html`
         <p>Welcome!</p>
-        <p><a href="about">About us</a></p>
+        <p><a href="about/">About us</a></p>
         <ul>
           ${readDir("/routes").then((dir) =>
           dir.map((file) =>
