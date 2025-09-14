@@ -17,7 +17,7 @@ export const GET = () =>
           )
         )}
         </ul>
-        <pre>${readTextFile("/routes/about.server.js")}</pre>
+        <pre>${readTextFile("/routes/about.server.ts")}</pre>
       `,
     }),
   );
